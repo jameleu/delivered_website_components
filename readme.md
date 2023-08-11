@@ -1,6 +1,6 @@
 # MRobosub Website - James Leung's Parts
 ## What This Is
-This is a repo consisting of two pages that I wrote for the Mrobosub website. I was in charge of building the components and framework for these two pages. After, I collaborated with my teammates, reviewing my code and making design choices to result in the final product: https://www.michiganrobosub.com/
+This is a repo that I transferred from my branch of the private MRobosub GitLabs website repo. This repo consists of two pages that I wrote for the Mrobosub website. I was in charge of building the components and framework for these two pages. After, I collaborated with my teammates, reviewing my code, merging branches, and making design choices to result in the final product: https://www.michiganrobosub.com/
 
 The two pages were:
 * library page - hold the team's documentation
