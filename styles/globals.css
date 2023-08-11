@@ -1,0 +1,228 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+/* div{ 
+ border: red solid 1px; 
+} */
+
+/* Home Page Hover Animation */
+
+.word {
+  margin: 0;
+  line-height: .95;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.retype {
+  border-radius: 1rem;
+  font-variant-numeric: tabular-nums lining-nums;
+  padding: 0 1rem;
+}
+
+.retype:hover {
+  background: #002241cb;
+  color: #ffcb05;
+}
+
+.grabby {
+  transition: opacity 250ms ease;
+}
+
+.text:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
+}
+
+.outer-boi:has(.fancy:hover) .grabby {
+  opacity: 0.2;
+}
+
+.fancy > .letter {
+  display: inline-block;
+  transition: transform 350ms ease;
+}
+
+.fancy:hover > .letter {
+  transition-duration: 800ms;
+}
+
+.fancy:hover > .letter:nth-child(1) {
+  transform: translate(-60%, 40%) rotate(8deg);
+}
+
+.fancy:hover > .letter:nth-child(2) {
+  transform: translate(-40%, 20%) rotate(4deg);
+}
+
+.fancy:hover > .letter:nth-child(3) {
+  transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover > .letter:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.fancy:hover > .letter:nth-child(5) {
+  transform: translate(0%, -20%) rotate(5deg);
+}
+
+.fancy:hover > .letter:nth-child(6) {
+  transform: translate(0%, 20%) rotate(-3deg);
+}
+
+.fancy:hover > .letter:nth-child(7) {
+  transform: translate(0%, -40%) rotate(-5deg);
+}
+
+.fancy:hover > .letter:nth-child(8) {
+  transform: translate(0%, 15%) rotate(10deg);
+}
+
+/* Home Page Load Animation */
+
+@keyframes load {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grabby {
+  animation: .75s ease-out 0s 1 load forwards;
+}
+
+.word {
+  animation: .75s ease-out .35s 1 load forwards;
+}
+
+.tagline-animation {
+  opacity: 0;
+  animation: .75s ease-out .9s 1 load forwards;
+}
+
+.word:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+@keyframes dropin {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-link-animation {
+  opacity: 0;
+}
+
+.nav-link-animation:nth-child(1) {
+  animation: .35s ease-in-out .35s 1 dropin forwards;
+}
+
+.nav-link-animation:nth-child(3) {
+  animation: .35s ease-in-out .5s 1 dropin forwards;
+}
+
+.nav-link-animation:nth-child(5) {
+  animation: .35s ease-in-out .65s 1 dropin forwards;
+}
+
+.nav-link-animation:nth-child(7) {
+  animation: .35s ease-in-out .8s 1 dropin forwards;
+}
+
+@keyframes zoomInNav {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.75);
+  }
+  75% {
+    transform: translate(-50%, 0) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  75% {
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar-animation {
+  opacity: 0;
+  animation: .25s ease-out 0s 1 zoomInNav forwards;
+}
+
+.cta-animation {
+  opacity: 0;
+  animation: .25s ease-out 1.25s 1 zoomIn forwards;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+
+  animation-delay: .2s;
+  animation-duration: 1.5s;
+}
+
+.infinite{
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}

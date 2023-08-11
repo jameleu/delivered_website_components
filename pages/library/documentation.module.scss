@@ -1,0 +1,153 @@
+@use "../../styles/base";
+
+.whole_cont {
+    margin: 0;
+    --parallax_hgt: 100vh;
+}
+
+.background_video {
+    position: sticky;
+    top: 0;
+
+    min-height: var(--parallax_hgt);
+    width: 100%;
+    margin: calc(-1.3*var(--parallax_hgt)) 0 0 0;
+
+
+    z-index: -1;
+}
+
+.intro_header {
+    height: calc(var(--parallax_hgt)*1.1);
+    width: 100%;
+    margin: 0% 0% 5% 0%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-8%);
+
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+
+    font-size: 4vw;
+    color: white;
+
+    animation-fill-mode: forwards;
+
+    animation: fade_in 1.5s linear forwards;
+
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    40% {
+        opacitiy: 0.8;
+        transform: translateY(3%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.outer_cont {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    background-color: black;
+
+    margin: 0 0 9% 0;
+
+}
+
+.sect_b {
+    background-color: black;
+    margin: 2% 0 3% 0;
+    padding: 0 0 2% 0;
+    width: 100%;
+}
+
+.sect_w {
+    background-color: rgb(80, 80, 80);
+    margin: 2% 0 0% 0;
+    width: 100%;
+    min-height: 40vh;
+
+}
+
+.smaller_width {
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    
+    align-items: center;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.hdr {
+    font-size: 2.2vw;
+    text-align: center;
+}
+
+.body_txt {
+    width: 80%;
+    margin: 0% auto;
+    font-size: 1.8vh;
+}
+
+.t_header_cont {
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.t_header_txt {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    margin-right: 8%;
+
+}
+
+.dwn_btn {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 0.3rem;
+    background-color: base.$secondary-color;
+
+    font-size: 1.2rem;
+
+    color: rgb(66, 66, 66);
+}
+
+.dwn_btn:hover {
+    background-color: base.$secondary-color-ver2;
+    //mantine button does not allow this:
+    // transform: translateY(-3%) scale(1.5, 1.5); 
+}
+
+.dwn_btn:active {
+    background-color: white;
+    // transform: translateY(3%);
+}

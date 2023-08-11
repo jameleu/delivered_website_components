@@ -1,0 +1,37 @@
+{
+  "name": "robosub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "@mantine/carousel": "^5.10.3",
+    "@mantine/core": "^5.7.2",
+    "@mantine/hooks": "^5.10.3",
+    "@mantine/next": "^5.7.2",
+    "@react-spring/web": "^9.7.1",
+    "@tabler/icons": "^2.22.0",
+    "@tabler/icons-react": "^2.14.0",
+    "@use-gesture/react": "^10.2.25",
+    "embla-carousel-autoplay": "^7.0.9",
+    "embla-carousel-react": "^7.0.9",
+    "next": "13.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.56.1",
+    "tabler-icons-react": "^1.56.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0"
+  }
+}

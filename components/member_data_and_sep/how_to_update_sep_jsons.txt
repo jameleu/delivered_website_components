@@ -1,0 +1,3 @@
+1. Transfer updated member-data.json to this folder.
+2. From this folder, run "node ./json_cvt.js"
+3. The mech/elec/soft/bus/media_team.json files should have all been updated.
